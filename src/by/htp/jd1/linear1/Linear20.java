@@ -1,15 +1,15 @@
 package by.htp.jd1.linear1;
 
-//Известна длина окружности. Найти площадь круга, ограниченного этой окружностью
+//РР·РІРµСЃС‚РЅР° РґР»РёРЅР° РѕРєСЂСѓР¶РЅРѕСЃС‚Рё. РќР°Р№С‚Рё РїР»РѕС‰Р°РґСЊ РєСЂСѓРіР°, РѕРіСЂР°РЅРёС‡РµРЅРЅРѕРіРѕ СЌС‚РѕР№ РѕРєСЂСѓР¶РЅРѕСЃС‚СЊСЋ
 import java.util.Scanner;
 
 public class Linear20 {
 	public static void main(String[] args) {
 		double a;
-		System.out.println("Введите длину окружности");
+		System.out.println("Р’РІРµРґРёС‚Рµ РґР»РёРЅСѓ РѕРєСЂСѓР¶РЅРѕСЃС‚Рё");
 		Scanner scn = new Scanner(System.in);
 		a = scn.nextFloat();
-		System.out.println("Площадь круга : " + (Math.pow(a, 2) / (4 * Math.PI)));
+		System.out.println("РџР»РѕС‰Р°РґСЊ РєСЂСѓРіР° : " + (Math.pow(a, 2) / (4 * Math.PI)));
 
 	}
 }
