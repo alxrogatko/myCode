@@ -1,5 +1,5 @@
 package by.htp.jd1.linear1;
-//Найти площадь треугольника, две стороны которого равны а и b, а угол между этими сторонами у.
+//РќР°Р№С‚Рё РїР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°, РґРІРµ СЃС‚РѕСЂРѕРЅС‹ РєРѕС‚РѕСЂРѕРіРѕ СЂР°РІРЅС‹ Р° Рё b, Р° СѓРіРѕР» РјРµР¶РґСѓ СЌС‚РёРјРё СЃС‚РѕСЂРѕРЅР°РјРё Сѓ
 import java.util.Scanner;
 public class Linear26 {
 	public static void main(String[] args) {
@@ -7,14 +7,14 @@ public class Linear26 {
 		double b;
 		double alpha;
 		double s;
-		System.out.println("Введите значение двух сторон треугольника и значение угла в градусах");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґРІСѓС… СЃС‚РѕСЂРѕРЅ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° Рё Р·РЅР°С‡РµРЅРёРµ СѓРіР»Р° РІ РіСЂР°РґСѓСЃР°С… ");
 		Scanner scn = new Scanner(System.in);
 		a = scn.nextDouble();
 		b = scn.nextDouble();
 		alpha = scn.nextDouble();
 		alpha = Math.toRadians(alpha);
 		s = Math.sin(alpha)*a*b/2;
-		System.out.println("Площадь треугольника : "+s);
+		System.out.println("РџР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° : "+s);
 		
 		
 	}
