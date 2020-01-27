@@ -1,6 +1,6 @@
 package by.htp.jd1.linear1;
 
-//Три сопротивления R1 R2, и R3 соединены параллельно. Найдите сопротивление соединения
+//РўСЂРё СЃРѕРїСЂРѕС‚РёРІР»РµРЅРёСЏ R1 R2, Рё R3 СЃРѕРµРґРёРЅРµРЅС‹ РїР°СЂР°Р»Р»РµР»СЊРЅРѕ. РќР°Р№РґРёС‚Рµ СЃРѕРїСЂРѕС‚РёРІР»РµРЅРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ
 import java.util.Scanner;
 
 public class Linear30 {
@@ -9,13 +9,13 @@ public class Linear30 {
 		float r2;
 		float r3;
 		Scanner electroScanner = new Scanner(System.in);
-		System.out.println("Введите значение сопротивления резисторов");
-		r1 = electroScanner.nextInt();
-		r2 = electroScanner.nextInt();
-		r3 = electroScanner.nextInt();
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ СЃРѕРїСЂРѕС‚РёРІР»РµРЅРёСЏ СЂРµР·РёСЃС‚РѕСЂРѕРІ");
+		r1 = electroScanner.nextFloat();
+		r2 = electroScanner.nextFloat();
+		r3 = electroScanner.nextFloat();
 		r1 = 1 / r1;
 		r2 = 1 / r2;
 		r3 = 1 / r3;
-		System.out.println("Общее сопротивление " + (1 / (r1 + r2 + r3)));
+		System.out.println("РћР±С‰РµРµ СЃРѕРїСЂРѕС‚РёРІР»РµРЅРёРµ " + (1 / (r1 + r2 + r3)));
 	}
 }
