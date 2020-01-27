@@ -1,16 +1,16 @@
 package by.htp.jd1.linear1;
 
-//Дана длина ребра куба. Найти площадь грани, площадь полной поверхности и объем этого куба.
+//Р”Р°РЅР° РґР»РёРЅР° СЂРµР±СЂР° РєСѓР±Р°. РќР°Р№С‚Рё РїР»РѕС‰Р°РґСЊ РіСЂР°РЅРё, РїР»РѕС‰Р°РґСЊ РїРѕР»РЅРѕР№ РїРѕРІРµСЂС…РЅРѕСЃС‚Рё Рё РѕР±СЉРµРј СЌС‚РѕРіРѕ РєСѓР±Р°. 
 import java.util.Scanner;
 
 public class Linear18 {
 	public static void main(String[] args) {
 		double a;
 		String str;
-		System.out.println("Введите длину ребра куба");
+		System.out.println("Р’РІРµРґРёС‚Рµ РґР»РёРЅСѓ СЂРµР±СЂР° РєСѓР±Р°");
 		Scanner scn = new Scanner(System.in);
 		a = scn.nextDouble();
-		str = ("Площадь грани куба : " + Math.pow(a, 2) + " Площадь поверхности : "+ (6 * Math.pow(a, 2) + " Объем равен : " + Math.pow(a, 3))); 
+		str = ("РџР»РѕС‰Р°РґСЊ РіСЂР°РЅРё РєСѓР±Р°  : " + Math.pow(a, 2) + " РџР»РѕС‰Р°РґСЊ РїРѕРІРµСЂС…РЅРѕСЃС‚Рё : "+ (6 * Math.pow(a, 2) + " РћР±СЉРµРј СЂР°РІРµРЅ : " + Math.pow(a, 3))); 
 		System.out.println(str);
 
 	}
