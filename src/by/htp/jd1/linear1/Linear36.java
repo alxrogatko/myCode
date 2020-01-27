@@ -1,6 +1,6 @@
 package by.htp.jd1.linear1;
 
-//Найти частное произведений четных и нечетных цифр четырехзначного числа
+//РќР°Р№С‚Рё С‡Р°СЃС‚РЅРѕРµ РїСЂРѕРёР·РІРµРґРµРЅРёР№ С‡РµС‚РЅС‹С… Рё РЅРµС‡РµС‚РЅС‹С… С†РёС„СЂ С‡РµС‚С‹СЂРµС…Р·РЅР°С‡РЅРѕРіРѕ С‡РёСЃР»Р°
 import java.util.Scanner;
 
 public class Linear36 {
@@ -10,7 +10,7 @@ public class Linear36 {
 		float myNum;
 		float temp;
 		int counter = 0;
-		System.out.println("Введите четырехзначное  число");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‡РµС‚С‹СЂРµС…Р·РЅР°С‡РЅРѕРµ С‡РёСЃР»Рѕ");
 		Scanner scn = new Scanner(System.in);
 		myNum = scn.nextFloat();
 		while (counter < 4) {
