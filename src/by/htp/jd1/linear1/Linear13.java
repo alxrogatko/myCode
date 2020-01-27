@@ -2,7 +2,7 @@ package by.htp.jd1.linear1;
 
 import java.util.Scanner;
 
-// Заданы координаты трех вершин треугольника (х1 у2),(х2, у2) ),(х3, у3). Найти его периметр и площадь.
+// Р—Р°РґР°РЅС‹ РєРѕРѕСЂРґРёРЅР°С‚С‹ С‚СЂРµС… РІРµСЂС€РёРЅ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° (С…1 Сѓ2),(С…2, Сѓ2) ),(С…3, Сѓ3). РќР°Р№С‚Рё РµРіРѕ РїРµСЂРёРјРµС‚СЂ Рё РїР»РѕС‰Р°РґСЊ
 public class Linear13 {
 	public static void main(String[] args) {
 		float x1;
@@ -16,7 +16,7 @@ public class Linear13 {
 		float c;
 		float s;
 		s = 0;
-		System.out.println("введите координаты точек x1, y1, x2, y2, x3, y3");
+		System.out.println("РІРІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ С‚РѕС‡РµРє x1, y1, x2, y2, x3, y3");
 		Scanner sc = new Scanner(System.in);
 		x1 = sc.nextFloat();
 		y1 = sc.nextFloat();
