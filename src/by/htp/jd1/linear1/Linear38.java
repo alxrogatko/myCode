@@ -1,56 +1,63 @@
 package by.htp.jd1.linear1;
 
-/* Для данных областей составить линейную программу, которая печатает true, если точка с координатами (х, у)
-принадлежит закрашенной области, и false — в противном случае: */
-//!!!пограничные области считаю непринадлежащими закрашенной области
+/* Р”Р»СЏ РґР°РЅРЅС‹С… РѕР±Р»Р°СЃС‚РµР№ СЃРѕСЃС‚Р°РІРёС‚СЊ Р»РёРЅРµР№РЅСѓСЋ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ РїРµС‡Р°С‚Р°РµС‚ true, РµСЃР»Рё С‚РѕС‡РєР° СЃ РєРѕРѕСЂРґРёРЅР°С‚Р°РјРё (С…, Сѓ)
+ РїСЂРёРЅР°РґР»РµР¶РёС‚ Р·Р°РєСЂР°С€РµРЅРЅРѕР№ РѕР±Р»Р°СЃС‚Рё, Рё false вЂ” РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ: */
+//!!!РїРѕРіСЂР°РЅРёС‡РЅС‹Рµ РѕР±Р»Р°СЃС‚Рё СЃС‡РёС‚Р°СЋ РЅРµРїСЂРёРЅР°РґР»РµР¶Р°С‰РёРјРё Р·Р°РєСЂР°С€РµРЅРЅРѕР№ РѕР±Р»Р°СЃС‚Рё
 import java.util.Scanner;
 
 public class Linear38 {
-	public static void main(String[] args) {
-		double x;
-		double y;
-		double y1;
-		double y2;
-		boolean flag;
-		flag = false;
-		System.out.println("Для первого случая");
-		System.out.println("Введите координаты точки");
-		Scanner scn = new Scanner(System.in);
-		x = scn.nextDouble();
-		y = scn.nextDouble();
-		y1 = x + 4;
-		y2 = (-1 * x + 4);
-		if (y < y1 && y < y2 && y > 0) {
-			System.out.print("true");
-		} else {
-			System.out.println("false");
 
-		}
-		System.out.println("Для второго случая");
-		System.out.println("Введите координаты точки");
-		x = scn.nextDouble();
-		y = scn.nextDouble();
-		if (y > 0 && y > -3 && x > -4 && x < 4)
-			flag = true;
-		if (y == 0 && x > -2 && x < 2)
-			flag = true;
-		if (y > 0 && y < 4 && x > -2 && x < 2)
-			flag = true;
-		System.out.println(flag);
+    public static void main(String[] args) {
+        double x;
+        double y;
+        double y1;
+        double y2;
+        boolean flag;
+        flag = false;
+        System.out.println("Р”Р»СЏ РїРµСЂРІРѕРіРѕ СЃР»СѓС‡Р°СЏ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ С‚РѕС‡РєРё");
+        Scanner scn = new Scanner(System.in);
+        x = scn.nextDouble();
+        y = scn.nextDouble();
+        y1 = x + 4;
+        y2 = (-1 * x + 4);
+        if (y < y1 && y < y2 && y > 0) {
+            System.out.print("true");
+        } else {
+            System.out.println("false");
 
-		System.out.println("Для третьего случая");
-		System.out.println("Введите координаты точки");
-		flag = false;
-		x = scn.nextDouble();
-		y = scn.nextDouble();
-		if (x > 0 && y > 0 && y < (Math.sqrt((Math.pow(4, 2) - Math.pow(x, 2)))))
-			flag = true;
-		if (x > 0 && y < 0 && Math.abs(y) < (Math.sqrt(Math.pow(5, 2) - Math.pow(x, 2))))
-			flag = true;
-		if (y == 0 && x > 0 && x < 4)
-			flag = true;
-		System.out.print(flag);
+        }
+        System.out.println("Р”Р»СЏ РІС‚РѕСЂРѕРіРѕ СЃР»СѓС‡Р°СЏ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ С‚РѕС‡РєРё");
+        x = scn.nextDouble();
+        y = scn.nextDouble();
+        if (y > 0 && y > -3 && x > -4 && x < 4) {
+            flag = true;
+        }
+        if (y == 0 && x > -2 && x < 2) {
+            flag = true;
+        }
+        if (y > 0 && y < 4 && x > -2 && x < 2) {
+            flag = true;
+        }
+        System.out.println(flag);
 
-	}
+        System.out.println("Р”Р»СЏ С‚СЂРµС‚СЊРµРіРѕ СЃР»СѓС‡Р°СЏ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ С‚РѕС‡РєРё");
+        flag = false;
+        x = scn.nextDouble();
+        y = scn.nextDouble();
+        if (x > 0 && y > 0 && y < (Math.sqrt((Math.pow(4, 2) - Math.pow(x, 2))))) {
+            flag = true;
+        }
+        if (x > 0 && y < 0 && Math.abs(y) < (Math.sqrt(Math.pow(5, 2) - Math.pow(x, 2)))) {
+            flag = true;
+        }
+        if (y == 0 && x > 0 && x < 4) {
+            flag = true;
+        }
+        System.out.print(flag);
+
+    }
 
 }
