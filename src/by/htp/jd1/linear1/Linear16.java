@@ -1,12 +1,12 @@
 package by.htp.jd1.linear1;
-//Найти произведение цифр заданного четырехзначного числа
+//РќР°Р№С‚Рё РїСЂРѕРёР·РІРµРґРµРЅРёРµ С†РёС„СЂ Р·Р°РґР°РЅРЅРѕРіРѕ С‡РµС‚С‹СЂРµС…Р·РЅР°С‡РЅРѕРіРѕ С‡РёСЃР»Р° 
 import java.util.Scanner;
 
 public class Linear16 {
 	public static void main(String[] args) {
 		int a, b;
 		int temp1 = 0, temp2 = 1;
-		System.out.println("Введите число");
+		System.out.println("Г‚ГўДєГ¤ДЌЕ€Дє Г·ДЌЕ„Г«Г®");
 		Scanner scn = new Scanner(System.in);
 		a = scn.nextInt();
 		b = a;
@@ -16,7 +16,7 @@ public class Linear16 {
 			temp2 = temp2 * temp1;
 		}
 
-		System.out.println("Произведение цифр числа " + b + " : " + temp2);
+		System.out.println("РџСЂРѕРёР·РІРµРґРµРЅРёРµ С†РёС„СЂ С‡РёСЃР»Р° " + b + " : " + temp2);
 
 	}
 }
