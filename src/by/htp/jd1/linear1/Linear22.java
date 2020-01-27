@@ -1,33 +1,33 @@
 package by.htp.jd1.linear1;
 
-/*Дано натуральное число Т, которое представляет длительность прошедшего времени в секундах. Вывести данное
-значение длительности в часах, минутах и секундах в следующей форме:
-ННч ММмин SSc.*/
+/*Р”Р°РЅРѕ РЅР°С‚СѓСЂР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ Рў, РєРѕС‚РѕСЂРѕРµ РїСЂРµРґСЃС‚Р°РІР»СЏРµС‚ РґР»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РїСЂРѕС€РµРґС€РµРіРѕ РІСЂРµРјРµРЅРё РІ СЃРµРєСѓРЅРґР°С…. Р’С‹РІРµСЃС‚Рё РґР°РЅРЅРѕРµ
+Р·РЅР°С‡РµРЅРёРµ РґР»РёС‚РµР»СЊРЅРѕСЃС‚Рё РІ С‡Р°СЃР°С…, РјРёРЅСѓС‚Р°С… Рё СЃРµРєСѓРЅРґР°С… РІ СЃР»РµРґСѓСЋС‰РµР№ С„РѕСЂРјРµ:
+РќРќС‡ РњРњРјРёРЅ SSc. */
 import java.util.Scanner;
 
 public class Linear22 {
 	public static void main(String[] args) {
 		int sec;
 		int temp;
-		System.out.println("Введите количество секунд");
+		System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРµРєСѓРЅРґ");
 		Scanner scn = new Scanner(System.in);
 		sec = scn.nextInt();
 		temp = sec / 3600;
 		if (temp < 10) {
 			System.out.print("0");
 		}
-		System.out.print(temp + " ч ");
+		System.out.print(temp + " Г· ");
 		sec = sec % 3600;
 		temp = sec / 60;
 		if (temp < 10) {
 			System.out.print("0");
 		}
-		System.out.print(temp + " мин ");
+		System.out.print(temp + " Г¬ГЁГ­ ");
 		sec = sec % 60;
 		if (sec < 10) {
 			System.out.print("0");
 		}
-		System.out.print(sec + " сек ");
+		System.out.print(sec + " Г±ГҐГЄ ");
 
 	}
 }
