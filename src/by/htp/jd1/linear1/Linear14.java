@@ -1,14 +1,14 @@
 package by.htp.jd1.linear1;
-//14. Вычислить длину окружности и площадь круга одного и того же заданного радиуса R.
+//14. Р’С‹С‡РёСЃР»РёС‚СЊ РґР»РёРЅСѓ РѕРєСЂСѓР¶РЅРѕСЃС‚Рё Рё РїР»РѕС‰Р°РґСЊ РєСЂСѓРіР° РѕРґРЅРѕРіРѕ Рё С‚РѕРіРѕ Р¶Рµ Р·Р°РґР°РЅРЅРѕРіРѕ СЂР°РґРёСѓСЃР° R
 import java.util.Scanner;
 
 public class Linear14 {
 	public static void main(String[] args) {
 		double r;
-		System.out.println("Введите радиус круга");
+		System.out.println("Р’РІРµРґРёС‚Рµ СЂР°РґРёСѓСЃ РєСЂСѓРіР° ");
 		Scanner scn = new Scanner(System.in);
 		r = scn.nextDouble();
-		System.out.print("Длина окружности " + (Math.PI*r*2) + " Площадь круга " + Math.PI*r*r );
+		System.out.print("Р”Р»РёРЅР° РѕРєСЂСѓР¶РЅРѕСЃС‚Рё  " + (Math.PI*r*2) + " РџР»РѕС‰Р°РґСЊ РєСЂСѓРіР°  " + Math.PI*r*r );
 		
 		
 	}
