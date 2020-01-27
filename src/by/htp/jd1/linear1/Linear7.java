@@ -1,18 +1,18 @@
 package by.htp.jd1.linear1;
 
-//Дан прямоугольник, ширина которого в два раза меньше длины. Найти площадь прямоугольника
+//Р”Р°РЅ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє, С€РёСЂРёРЅР° РєРѕС‚РѕСЂРѕРіРѕ РІ РґРІР° СЂР°Р·Р° РјРµРЅСЊС€Рµ РґР»РёРЅС‹. РќР°Р№С‚Рё РїР»РѕС‰Р°РґСЊ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
 import java.util.Scanner;
 
 public class Linear7 {
 
-	public static void main(String[] args) {
-		float a;
+    public static void main(String[] args) {
+        float a;
 
-		System.out.println("Введите значение стороны прямоугольника");
-		Scanner inputLong = new Scanner(System.in);
-		a = inputLong.nextFloat();
-		System.out.println("Площадь, если вы вводили длину " + a * a / 2 + ", если вводили ширину " + a * a * 2);
+        System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ СЃС‚РѕСЂРѕРЅС‹ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°");
+        Scanner inputLong = new Scanner(System.in);
+        a = inputLong.nextFloat();
+        System.out.println("РџР»РѕС‰Р°РґСЊ, РµСЃР»Рё РІС‹ РІРІРѕРґРёР»Рё РґР»РёРЅСѓ " + a * a / 2 + ", РµСЃР»Рё РІРІРѕРґРёР»Рё С€РёСЂРёРЅСѓ " + a * a * 2);
 
-	}
+    }
 
 }
