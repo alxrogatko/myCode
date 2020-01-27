@@ -1,7 +1,9 @@
 package by.htp.jd1.linear1;
 
 import java.util.Scanner;
-//Даны натуральные числа М и N. Вывести старшую цифру дробной части и младшую цифру целой части числа M/N
+//
+//Р”Р°РЅС‹ РЅР°С‚СѓСЂР°Р»СЊРЅС‹Рµ С‡РёСЃР»Р° Рњ Рё N. Р’С‹РІРµСЃС‚Рё СЃС‚Р°СЂС€СѓСЋ С†РёС„СЂСѓ РґСЂРѕР±РЅРѕР№ С‡Р°СЃС‚Рё Рё РјР»Р°РґС€СѓСЋ С†РёС„СЂСѓ С†РµР»РѕР№ С‡Р°СЃС‚Рё С‡РёСЃР»Р° M/N
+
 public class Linear35_1 {
 	public static void main(String[] args) {
 		int m;
@@ -11,7 +13,7 @@ public class Linear35_1 {
 		int b;
 		float temp;
 		int temp1;
-		System.out.println("Введите числа M и N");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Р° M Рё N ");
 		Scanner sc = new Scanner(System.in);
 		m = sc.nextInt();
 		n = sc.nextInt();
@@ -26,7 +28,7 @@ public class Linear35_1 {
 		mn = (temp - temp1) * 10;
 		b = (int) mn;
 
-		System.out.print(" искомые числа " + a + " и " + b);
+		System.out.print(" РёСЃРєРѕРјС‹Рµ С‡РёСЃР»Р° " + a + " Рё " + b); 
 
 	}
 }
