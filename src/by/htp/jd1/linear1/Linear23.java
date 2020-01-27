@@ -1,6 +1,6 @@
 package by.htp.jd1.linear1;
 
-//Найти площадь кольца, внутренний радиус которого равен r, а внешний — R (R> r).
+//РќР°Р№С‚Рё РїР»РѕС‰Р°РґСЊ РєРѕР»СЊС†Р°, РІРЅСѓС‚СЂРµРЅРЅРёР№ СЂР°РґРёСѓСЃ РєРѕС‚РѕСЂРѕРіРѕ СЂР°РІРµРЅ r, Р° РІРЅРµС€РЅРёР№ вЂ” R (R> r).
 import java.util.Scanner;
 
 public class Linear23 {
@@ -8,11 +8,11 @@ public class Linear23 {
 
 		double rOut;
 		double rIn;
-		System.out.println("Введите R и r");
+		System.out.println("Р’РІРµРґРёС‚Рµ R Рё r");
 		Scanner scn = new Scanner(System.in);
 		rOut = scn.nextDouble();
 		rIn = scn.nextDouble();
-		System.out.println("Площадь кольца: " + (Math.PI * Math.pow(rOut, 2) - Math.PI * Math.pow(rIn, 2)));
+		System.out.println("РџР»РѕС‰Р°РґСЊ РєРѕР»СЊС†Р°: " + (Math.PI * Math.pow(rOut, 2) - Math.PI * Math.pow(rIn, 2)));
 
 	}
 }
