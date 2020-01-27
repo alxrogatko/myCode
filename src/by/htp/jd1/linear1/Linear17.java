@@ -1,5 +1,5 @@
 package by.htp.jd1.linear1;
-//17. Даны два числа. Найти среднее арифметическое кубов этих чисел и среднее геометрическое модулей этих чисел.
+//17. Р”Р°РЅС‹ РґРІР° С‡РёСЃР»Р°. РќР°Р№С‚Рё СЃСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ РєСѓР±РѕРІ СЌС‚РёС… С‡РёСЃРµР» Рё СЃСЂРµРґРЅРµРµ РіРµРѕРјРµС‚СЂРёС‡РµСЃРєРѕРµ РјРѕРґСѓР»РµР№ СЌС‚РёС… С‡РёСЃРµР»
 
 import java.util.Scanner;
 
@@ -7,12 +7,12 @@ public class Linear17 {
 	public static void main(String[] args) {
 		double a;
 		double b;
-		System.out.println("Введите два числа");
+		System.out.println("Р’РІРµРґРёС‚Рµ РґРІР° С‡РёСЃР»Р° ");
 		Scanner scn = new Scanner(System.in);
 		a = scn.nextDouble();
 		b = scn.nextDouble();
-		System.out.println("Среднее арифметическое кубов чисел : " + (Math.pow(a, 3) + Math.pow(b, 3)) / 2
-				+ "  Среднее геометрическое модулей : " + Math.sqrt(Math.abs(a * b)));
+		System.out.println("РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ РєСѓР±РѕРІ С‡РёСЃРµР» : " + (Math.pow(a, 3) + Math.pow(b, 3)) / 2
+				+ "  РЎСЂРµРґРЅРµРµ РіРµРѕРјРµС‚СЂРёС‡РµСЃРєРѕРµ РјРѕРґСѓР»РµР№ : " + Math.sqrt(Math.abs(a * b)));
 
 	}
 }
