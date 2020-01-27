@@ -1,22 +1,23 @@
 package by.htp.jd1.linear1;
 
-/* Дано действительное число х. Не пользуясь никакими другими арифметическими операциями, кроме умножения,
-сложения и вычитания, вычислите за минимальное число операций:
-2x4 - 3х3 + 4х2 - 5х + 6 */
+/* Р”Р°РЅРѕ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ С…. РќРµ РїРѕР»СЊР·СѓСЏСЃСЊ РЅРёРєР°РєРёРјРё РґСЂСѓРіРёРјРё Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРёРјРё РѕРїРµСЂР°С†РёСЏРјРё, РєСЂРѕРјРµ СѓРјРЅРѕР¶РµРЅРёСЏ,
+ СЃР»РѕР¶РµРЅРёСЏ Рё РІС‹С‡РёС‚Р°РЅРёСЏ, РІС‹С‡РёСЃР»РёС‚Рµ Р·Р° РјРёРЅРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ РѕРїРµСЂР°С†РёР№:
+ 2x4 - 3С…3 + 4С…2 - 5С… + 6 */
 import java.util.Scanner;
 
 public class Linear39 {
-	public static void main(String[] args) {
-		for (;;) {
-			double x;
-			double y;
-			System.out.println("Введите х");
-			Scanner scn = new Scanner(System.in);
-			x = scn.nextDouble();
 
-			y = x * (x * (x * (2 * x - 3) + 4) - 5) + 6;
-			System.out.println(y);
+    public static void main(String[] args) {
+        for (;;) {
+            double x;
+            double y;
+            System.out.println("Р’РІРµРґРёС‚Рµ С…");
+            Scanner scn = new Scanner(System.in);
+            x = scn.nextDouble();
 
-		}
-	}
+            y = x * (x * (x * (2 * x - 3) + 4) - 5) + 6;
+            System.out.println(y);
+
+        }
+    }
 }
