@@ -1,6 +1,6 @@
 package by.htp.jd1.linear1;
 
-//Вычислить расстояние между двумя точками с данными координатами (х1, у1)и (x2, у2)
+//Р’С‹С‡РёСЃР»РёС‚СЊ СЂР°СЃСЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ РґРІСѓРјСЏ С‚РѕС‡РєР°РјРё СЃ РґР°РЅРЅС‹РјРё РєРѕРѕСЂРґРёРЅР°С‚Р°РјРё (С…1, Сѓ1)Рё (x2, Сѓ2)
 import java.util.Scanner;
 
 public class Linear12 {
@@ -9,7 +9,7 @@ public class Linear12 {
 		double y1;
 		double x2;
 		double y2;
-		System.out.println("Введите координаты точек х1, y1, x2, y2");
+		System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ С‚РѕС‡РµРє С…1, y1, x2, y2");
 		Scanner scn = new Scanner(System.in);
 		x1 = scn.nextDouble();
 		y1 = scn.nextDouble();
