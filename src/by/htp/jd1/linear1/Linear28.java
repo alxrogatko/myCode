@@ -1,6 +1,6 @@
 package by.htp.jd1.linear1;
 
-//Составить программу перевода радианной меры угла в градусы, минуты и секунды.
+//РЎРѕСЃС‚Р°РІРёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ РїРµСЂРµРІРѕРґР° СЂР°РґРёР°РЅРЅРѕР№ РјРµСЂС‹ СѓРіР»Р° РІ РіСЂР°РґСѓСЃС‹, РјРёРЅСѓС‚С‹ Рё СЃРµРєСѓРЅРґС‹.
 import java.util.Scanner;
 
 public class Linear28 {
@@ -10,7 +10,7 @@ public class Linear28 {
 		int deg;
 		int min;
 		int sec;
-		System.out.println("Введите радианную меру");
+		System.out.println("Р’РІРµРґРёС‚Рµ СЂР°РґРёР°РЅРЅСѓСЋ РјРµСЂСѓ");
 		Scanner scan = new Scanner(System.in);
 		rad = scan.nextDouble();
 		rad = Math.PI / 2;
@@ -18,7 +18,7 @@ public class Linear28 {
 		temp = (int) (((180 / Math.PI) * rad) - deg) * 60;
 		min = (int) temp;
 		sec = (int) ((int) (((180 / Math.PI) * rad) - deg) * 60 - temp);
-		System.out.print(deg + " град " + min + " минут " + sec + "секунд");
+		System.out.print(deg + " РіСЂР°Рґ " + min + " РјРёРЅСѓС‚ " + sec + "СЃРµРєСѓРЅРґ");
 
 	}
 }
