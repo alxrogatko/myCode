@@ -7,7 +7,7 @@ public class Linear33 {
 	public static void main(String[] args) {
 		char a;
 		int b;
-		System.out.println("Ââåäèòå ñèìâîë");
+		System.out.println("Введите символ");
 		Scanner sc = new Scanner(System.in);
 		a = sc.next().charAt(0);
 		b = a;
