@@ -28,9 +28,14 @@ public class Linear32 {
 		p = x24(h, p);
 		q = sixty(m, q);
 		r = sixty(sec, r);
-		System.out.println(p + " " + q + " " + r + " ");
-
-	}
+                if(p<10){System.out.print(0);}
+		System.out.print(p + " " );
+                if(q<10){System.out.print("0");}
+                System.out.print(q+" ");
+                if(r<10){System.out.print("0");}
+                System.out.print(r);
+                }
+	
 
 	public static int sixty(int s, int temp) {
 
