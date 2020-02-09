@@ -446,7 +446,7 @@ class Task26 {
 			a = (char) (i + 1);
 
 			System.out.print(i + 1 + " -> " + a + " ; ");
-			if (i > 0 && i % 5 == 0) {
+			if ( a % 5 == 0) {
 				System.out.println();
 			}
 		}
