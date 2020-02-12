@@ -823,3 +823,98 @@ class Task37 {
 		return second;
 	}
 }
+
+/*
+ * 38. Для заданного натурального числа определить, образуют ли его цифры
+ * арифметическую прогрессию. Предполагается, что в числе не менее трёх цифр.
+ * Например: 1357, 963.
+ * 
+ */
+class Task38 {
+	public static void main(String[] args) {
+		int a, b, c;
+		System.out.println("Введите число");
+		Scanner s = new Scanner(System.in);
+		a = s.nextInt();
+		b = a % 10;
+		c = (a / 10) % 10;
+		boolean prog = false;
+		b = c - b;
+		while (a > 0) {
+
+			if (Math.abs(b) == Math.abs(a % 10 - Math.abs((a / 10) % 10))) {
+				prog = true;
+			} else if (a > 10) {
+				prog = false;
+				break;
+			}
+
+			a = a / 10;
+
+		}
+		System.out.print("Образуют ли цифры прогрессию: " + prog);
+	}
+}
+
+/*
+ * 39. В трехзначном числе зачеркнули старшую цифру. Когда полученное число
+ * умножили на 7, то получили исходное число. Найти это число.
+ * 
+ */
+class Task39 {
+	public static void main(String[] args) {
+		int a, b;
+		for (int i = 100; i < 1000; i++) {
+			a = i % 10;
+			b = (i / 10) % 10;
+			if (7 * (a + b * 10) == i)
+				System.out.print(i);
+
+		}
+	}
+}
+
+/*
+ * 40. Получить все числа, не превышающие заданного числа N, которые делятся без
+ * остатка на все свои цифры.
+ * 
+ */
+class Task40 {
+	public static void main(String[] args) {
+		int num;
+		Scanner s = new Scanner(System.in);
+		System.out.println("Input n");
+		num = s.nextInt();
+		for (int i = 11; i < num; i++) {
+			if (chek(i)) {
+				System.out.println(i);
+			}
+
+		}
+
+	}
+
+	static boolean chek(int a) {
+		boolean r = true;
+		int temp;
+		int temp1;
+		temp = a;
+		while (a > 0) {
+			r = true;
+			temp1 = a % 10;
+			if (temp1 == 0) {
+				r = false;
+				break;
+			}
+			if (temp % temp1 != 0) {
+				r = false;
+				break;
+			}
+
+			a = a / 10;
+		}
+
+		return r;
+	}
+
+}
