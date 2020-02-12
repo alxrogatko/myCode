@@ -446,7 +446,7 @@ class Task26 {
 			a = (char) (i + 1);
 
 			System.out.print(i + 1 + " -> " + a + " ; ");
-			if ( a % 5 == 0) {
+			if (a % 5 == 0) {
 				System.out.println();
 			}
 		}
@@ -575,7 +575,8 @@ class Task29 {
 	}
 
 }
-//30. Написать программу, переводящую римские цифры в арабские.
+
+// 30. Написать программу, переводящую римские цифры в арабские.
 class Task30 {
 	public static void main(String[] args) {
 		String rom;
@@ -627,5 +628,198 @@ class Task30 {
 		}
 
 		System.out.print("В арабских цифрах " + rom + " выглядит так: " + (sum2 - sum1));
+	}
+}
+
+// 31. Компьютер генерирует пять чисел в диапазоне от 1 до 15 включительно.
+// Человек пытается их
+// угадать. Программа должна выводить угаданные и неугаданные числа из тех, что
+// сгенерировала
+// программа, а также ошибочные числа пользователя.
+class Task31 {
+	public static void main(String[] args) {
+		int a, temp;
+		int[] arr = new int[5];
+		int[] user = new int[5];
+		Scanner s = new Scanner(System.in);
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int) ((Math.random() * 15) + 1);
+
+		}
+		System.out.println("Введите 5 чисел");
+		for (int i = 0; i < user.length; i++) {
+			user[i] = s.nextInt();
+		}
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(i + 1 + " . ");
+			if (arr[i] == user[i]) {
+				System.out.println("Число " + arr[i] + " угадано");
+				;
+			} else {
+				System.out.println("Сгенерировано " + arr[i] + " , а вы ввели " + user[i]);
+
+			}
+		}
+
+	}
+}
+
+/*
+ * 32. Проверить введенную пользователем строку на наличие недопустимых
+ * символов. В качестве первого символа допустимы только буквы и знак
+ * подчеркивания. Остальные символы могут быть буквами, цифрами и знаком
+ * подчеркивания.
+ */
+class Task32 {
+	public static void main(String[] args) {
+		String str;
+		System.out.println("Введите строку");
+		boolean ok = false;
+		int ctr = 0;
+		Scanner s = new Scanner(System.in);
+		str = s.nextLine();
+		char c1 = str.charAt(0);
+
+		if (str.charAt(0) == '_' || Character.isLetter(str.charAt(0))) {
+			for (int i = 0; i < str.length() - 1; i++) {
+				ok = true;
+				if (Character.isLetter(str.charAt(i + 1)) || Character.isDigit(str.charAt(i + 1))
+						|| str.charAt(i + 1) == '_') {
+					ctr++;
+
+				}
+			}
+
+		} else {
+			ok = false;
+		}
+		if (ctr != str.length() - 1) {
+			ok = false;
+		}
+		System.out.println("Ваша строка " + ok);
+	}
+}
+
+// 33. Найдите наибольшую цифру данного натурального числа.
+class Task33 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a;
+		System.out.println("Введите число");
+		a = sc.nextInt();
+		int temp = 1;
+
+		int max = 1;
+		temp = a;
+
+		while (a > 0) {
+			temp = a % 10;
+			a = a / 10;
+			if (max < temp) {
+				max = temp;
+			}
+		}
+		System.out.println(max);
+	}
+}
+
+// 34. Найдите все четырехзначные числа, сумма цифр каждого из которых равна 15.
+class Task34 {
+	public static void main(String[] args) {
+		int a;
+		for (int i = 1000; i <= 9999; i++) {
+			if (sumNum(i) == 15) {
+				System.out.println(i);
+			}
+
+		}
+
+	}
+
+	static int sumNum(int b) {
+		int sum = 0;
+		while (b > 0) {
+			sum = sum + b % 10;
+			b = b / 10;
+		}
+
+		return sum;
+
+	}
+
+}
+
+// 35. Найдите количество четных цифр данного натурального числа.
+class Task35 {
+	public static void main(String[] args) {
+		int a;
+		int sum = 0;
+		int temp;
+		System.out.println("Введите число");
+		Scanner s = new Scanner(System.in);
+		a = s.nextInt();
+		while (a > 0) {
+			temp = a % 10;
+			a = a / 10;
+			if (temp % 2 == 0) {
+				sum++;
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+// 36. Два двузначных числа, записанных одно за другим , образуют четырёхзначное
+// число, которое делится на их произведение. Найти эти числа.
+class Task36 {
+	public static void main(String[] args) {
+		int fHalf, sHalf, fs;
+		for (int i = 1000; i < 9999; i++) {
+			fHalf = i / 100;
+			sHalf = i % 10 + 10 * ((i / 10) % 10);
+			if (sHalf != 0 && sHalf >= 10) {
+				if (i % (fHalf * sHalf) == 0) {
+					System.out.println(i + " делится на " + fHalf + " * " + sHalf);
+				}
+			}
+		}
+	}
+
+}
+
+// 37. Даны два двузначных числа А и В. Из этих чисел составили 2 четырехзначных
+// числа: первое число получили путем написания сначала числа А, затем В. Для
+// получения второго числа сначала записали число В, затем А. Найти числа А и В
+// если известно , что первое четырехзначное число нацело делится на 99, а
+// второе на 49.
+class Task37 {
+	public static void main(String[] args) {
+		int first, second, var1, var2;
+		int temp;
+		for (int i = 1000; i <= 9999; i++) {
+			if (i % 49 == 0) {
+				var1 = cutterF(i);
+				var2 = cutterS(i);
+				temp = var1 + 100 * var2;
+				if (temp % 99 == 0 && var1 >= 10 && var2 >= 10)
+					System.out.println(i + " " + temp);
+
+			}
+		}
+
+	}
+
+	static int cutterF(int i) {
+		int first;
+		first = i / 100;
+
+		return first;
+
+	}
+
+	static int cutterS(int i) {
+		int second;
+		second = i % 10 + 10 * ((i / 10) % 10);
+		return second;
 	}
 }
