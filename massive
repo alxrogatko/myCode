@@ -1,0 +1,533 @@
+package by.htp.jd1.array;
+
+import java.util.Scanner;
+
+//1. В массив A [N] занесены натуральные числа. Найти сумму тех элементов, которые кратны данному К.
+class Task1 {
+	public static void main(String[] args) {
+		int arr[] = { 1, 3, 2, 5, 5, 3, 30, 10, 7, 21 };
+		Scanner sc = new Scanner(System.in);
+		int sum = 0;
+		int k;
+		System.out.println("Введите к");
+		k = sc.nextInt();
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % k == 0)
+				sum = sum + arr[i];
+
+		}
+		System.out.print(sum);
+	}
+}
+
+// 2. В целочисленной последовательности есть нулевые элементы. Создать массив
+// из номеров этих элементов.
+class Task2 {
+	public static void main(String[] args) {
+
+		// допустим, числа делящиеся на 2 и 3 одновременно, являются нулевыми
+		// элементами. Диапазон примем от нуля до тридцати
+		int i;
+		int c = 0;
+		for (i = 0; i <= 30; i++) {
+			if (i % 2 == 0 && i % 3 == 0) {
+				c++;
+
+			}
+		}
+		int[] arr = new int[c];
+		int j = 0;
+		for (i = 0; i <= 30; i++) {
+			if (i % 2 == 0 && i % 3 == 0) {
+				arr[j] = i;
+				j++;
+
+			}
+		}
+		for (int v : arr) {
+			System.out.print(v + "   ");
+		}
+	}
+}
+
+// 3. Дана последовательность целых чисел а1 а2,..., аn . Выяснить, какое число
+// встречается раньше - положительное или
+// отрицательное.
+class Task3 {
+	public static void main(String[] args) {
+		int arr[] = new int[10];
+		for (int i = 0; i < 10; i++) {
+			arr[i] = (int) ((Math.random() * 10) * Math.pow(-1, (int) (Math.random() * 2)));
+		}
+		if (arr[0] >= 0) {
+			System.out.println("Первое число положительное");
+		} else {
+			System.out.println("Первое число отрицательное");
+		}
+		for (int a : arr) {
+			System.out.print(a + "  ");
+		}
+
+	}
+}
+
+// 4. Дана последовательность действительных чисел а1 а2 ,..., аn . Выяснить,
+// будет ли она возрастающей.
+class Task4 {
+	public static void main(String[] args) {
+		String str;
+		boolean flag = true;
+		System.out.println("Введите через пробел элементы последовательности");
+		Scanner s = new Scanner(System.in);
+		str = s.nextLine();
+		String strarr[] = str.split(" ");
+		int[] arr = new int[strarr.length];
+
+		for (int i = 0; i < strarr.length; i++) {
+			arr[i] = Integer.parseInt(strarr[i]);
+		}
+		for (int i = 0; i < arr.length - 1; i++) {
+			if (arr[i + 1] < arr[i]) {
+				flag = false;
+				break;
+			}
+		}
+		if (flag) {
+			System.out.print("Возрастающая");
+		} else {
+			System.out.print("Не возрастающая");
+		}
+	}
+}
+
+// 5. Дана последовательность натуральных чисел а1 , а2 ,..., ап. Создать массив
+// из четных чисел этой последовательности.
+// Если таких чисел нет, то вывести сообщение об этом факте.
+class Task5 {
+	public static void main(String[] args) {
+		String str;
+		System.out.println("Введите цифры последовательности через пробел");
+		Scanner s = new Scanner(System.in);
+		str = s.nextLine();
+		int[] arr = stringToNum(str);
+		if (arr.length > 0) {
+			for (int a : arr) {
+				System.out.print(a + " ");
+			}
+		} else {
+			System.out.println("Последовательность не содержит четных цифр");
+		}
+
+	}
+
+	public static int[] stringToNum(String str) {
+		String[] sarr = str.split(" ");
+		int temp = 0;
+		int len = 0;
+		for (int i = 0; i < sarr.length; i++) {
+
+			temp = Integer.parseInt(sarr[i]);
+			if (temp % 2 == 0)
+				len++;
+		}
+		int[] arr = new int[len];
+		int t = 0;
+		for (String b : sarr) {
+
+			if (Integer.parseInt(b) % 2 == 0) {
+				arr[t] = Integer.parseInt(b);
+				t++;
+			}
+
+		}
+		return arr;
+	}
+}
+
+// 6. Дана последовательность чисел а1 ,а2 ,..., ап. Указать наименьшую длину
+// числовой оси, содержащую все эти числа.
+class Task6 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int[] arr = new int[10];
+		System.out.println("Введите последовательность из 10 цифр");
+
+		for (int i = 0; i < arr.length; i++) {
+
+			arr[i] = sc.nextInt();
+
+		}
+		int temp;
+		int lengthOfAxis;
+		for (int j = 0; j < arr.length; j++) {
+			for (int i = 0; i < arr.length - 1; i++) {
+				if (arr[i] > arr[i + 1]) {
+					temp = arr[i];
+					arr[i] = arr[i + 1];
+					arr[i + 1] = temp;
+				}
+
+			}
+
+		}
+		lengthOfAxis = arr[arr.length - 1] - arr[0];
+		System.out.print("Длина числовой оси " + lengthOfAxis);
+
+	}
+}
+
+// 7. Дана последовательность действительных чисел а1 ,а2 ,..., ап. Заменить все
+// ее члены, большие данного Z, этим числом.
+// Подсчитать количество замен.
+class Task7 {
+	public static void main(String[] args) {
+		int z;
+		int moveCounter = 0;
+		int[] array = new int[10];
+		System.out.println("Введите последовательость из десяти цифр");
+		Scanner sc = new Scanner(System.in);
+		for (int i = 0; i < array.length; i++) {
+			array[i] = sc.nextInt();
+
+		}
+		System.out.println("Введите z");
+		z = sc.nextInt();
+		for (int j = 0; j < array.length; j++) {
+			if (array[j] > z) {
+				array[j] = z;
+				moveCounter++;
+			}
+
+		}
+		System.out.println("Новая последовательность: ");
+		for (int p : array) {
+			System.out.print(p + " ");
+		}
+		System.out.println();
+		System.out.print("Количество замен: " + moveCounter);
+	}
+}
+
+// 8. Дан массив действительных чисел, размерность которого N. Подсчитать,
+// сколько в нем отрицательных,
+// положительных и нулевых элементов.
+class Task8 {
+	public static void main(String[] args) {
+		int zero = 0;
+		int zeroPlus = 0;
+		int zeroMinus = 0;
+		int z;
+		Scanner sc = new Scanner(System.in);
+
+		int[] arr;
+
+		System.out.println("Введите размер массива");
+		z = sc.nextInt();
+		arr = randArray(z);
+		for (int j = 0; j < arr.length; j++) {
+			if (arr[j] > 0)
+				zeroPlus++;
+			if (arr[j] < 0)
+				zeroMinus++;
+			if (arr[j] == 0)
+				zero++;
+
+		}
+		System.out.println("Массив: ");
+		for (int p : arr) {
+
+			System.out.print(p + " ");
+		}
+		System.out.println();
+		System.out.print("Количество положительных элементов: " + zeroPlus + "\n Количество отрицателных элементов: "
+				+ zeroMinus + "\n Количество нулевых элементов " + zero);
+	}
+
+	public static int[] randArray(int a) {
+		int[] arr = new int[a];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int) (((int) (Math.random() * 10)) * Math.pow(-1, (int) (Math.random() * 2)));
+		}
+		return arr;
+	}
+}
+
+// 9. Даны действительные числа а1 ,а2 ,..., аn . Поменять местами наибольший и
+// наименьший элементы.
+class Task9 {
+	public static void main(String[] args) {
+
+		int arr[] = { 4, 7, 8, 9, 6, 1, 8, 58, 100, -5, 0 };
+		int max;
+		int min;
+		int indexMax = 0;
+		int indexMin = 0;
+
+		min = arrMin(arr);
+		max = arrMax(arr);
+		System.out.println("Было: ");
+		for (int p : arr)
+			System.out.print(p + " ");
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] == max)
+				indexMax = i;
+			if (arr[i] == min)
+				indexMin = i;
+
+		}
+		arr[indexMax] = min;
+		arr[indexMin] = max;
+		System.out.println("Стало: ");
+		for (int p : arr)
+			System.out.print(p + " ");
+
+	}
+
+	public static int arrMax(int arr[]) {
+		int max = arr[0];
+		for (int a : arr) {
+			if (a > max)
+				max = a;
+		}
+		return max;
+	}
+
+	public static int arrMin(int arr[]) {
+
+		int min = arr[0];
+		for (int a : arr) {
+			if (a < min)
+				min = a;
+		}
+		return min;
+	}
+}
+
+// 10. Даны целые числа а1 ,а2 ,..., аn . Вывести на печать только те числа, для
+// которых аi > i.
+class Task10 {
+	public static void main(String[] args) {
+		int[] arr = new int[10];
+		System.out.println("Введите десять цифр");
+		Scanner sc = new Scanner(System.in);
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+		for (int j = 0; j < arr.length; j++) {
+			if (arr[j] > j + 1)
+				System.out.print(arr[j] + " ");
+
+		}
+
+	}
+}
+
+// 11. Даны натуральные числа а1 ,а2 ,..., аn . Указать те из них, у которых
+// остаток от деления на М равен L (0 < L < М-1).
+class Task11 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int[] arr = new int[10];
+		int m;
+		int l;
+		System.out.println("Введите последовательность из десяти цифр");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+		System.out.println("Введите M");
+		m = sc.nextInt();
+		System.out.println("Введите L");
+		l = sc.nextInt();
+		for (int p : arr) {
+			if (p % m == l)
+				System.out.print(p + " ");
+		}
+	}
+}
+//12. Задана последовательность N вещественных чисел. Вычислить сумму чисел, порядковые номера которых являются
+//простыми числами.
+class Task12 {
+	public static void main(String[] args) {
+		int n;
+		int sum = 0;
+
+		System.out.println("Введите длину последовательности");
+		Scanner sc = new Scanner(System.in);
+		n = sc.nextInt();
+		int[] arr = new int[n];
+		System.out.println("Введите элементы последовательности");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+
+		for (int i = 0; i < arr.length; i++) {
+			if (simplyCheker(i + 1)) {
+				sum = sum + arr[i];
+			}
+
+		}
+
+		System.out.print("Сумма чисел с простым числами в номере позиции: " + sum);
+	}
+
+	public static boolean simplyCheker(int a) {
+		boolean flag = true;
+		for (int i = 2; i < a; i++) {
+
+			if (a % i == 0) {
+				flag = false;
+				break;
+			}
+		}
+		return flag;
+
+	}
+
+}
+
+/*
+ * 13. Определить количество элементов последовательности натуральных чисел,
+ * кратных числу М и заключенных в промежутке от L до N.
+ */
+public class Task13 {
+
+	public static void main(String[] args) {
+		int l;
+		int n;
+		int m;
+		int arrayLength;
+		int res = 0;
+		System.out.println("Ведите длину последовательности");
+		Scanner sc = new Scanner(System.in);
+		arrayLength = sc.nextInt();
+		int arr[] = new int[arrayLength];
+		System.out.println("Введите элементы последовательности");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+		System.out.println("Введите L");
+		l = sc.nextInt();
+		System.out.println("Введите N");
+		n = sc.nextInt();
+		System.out.println("Введите M");
+		m = sc.nextInt();
+		for (int j = l; j < n; j++) {
+			if (arr[j] % m == 0) {
+				res++;
+			}
+
+		}
+
+		System.out.println(res + " ");
+
+	}
+
+}
+
+// 14. Дан одномерный массив A[N]. Найти:
+// max( четных ) min( нечетных )
+class Task14 {
+	public static void main(String[] args) {
+		int arr[] = { 1, 2, 3, 4, 5, 6 };
+		int max2;
+		int min1;
+		int res;
+		max2 = arr[1];
+		min1 = arr[0];
+		for (int i = 0; i < arr.length; i++) {
+			if (i % 2 == 0 && arr[i] < min1)
+				min1 = arr[i];
+			if (i % 2 != 0 && arr[i] > max2)
+				max2 = arr[i];
+
+		}
+		res = min1 + max2;
+		System.out.println(res);
+	}
+}
+
+/*
+ * 15. Дана последовательность действительных чисел n a ,a , ,a 1 2  . Указать
+ * те ее элементы, которые принадлежат отрезку [с, d].
+ */
+class Task15 {
+	public static void main(String[] args) {
+		int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+		System.out.println("Введите границы отрезка");
+		int c;
+		int d;
+		Scanner sc = new Scanner(System.in);
+		c = sc.nextInt();
+		d = sc.nextInt();
+		for (int p : arr) {
+			if (p >= c && p <= d) {
+				System.out.print(p + "  ");
+			}
+		}
+	}
+}
+
+// 16. Даны действительные числа n a ,a , ,a 1 2  . Найти
+// max( , , , ) 1 2 2 2 −1 +1 + + + n n n n a a a a  a a .
+class Task16 {
+	public static void main(String[] args) {
+		int arr[] = { 1, 2, 3, 4, 5, 6, 7, 80, 9, 10 };
+		int max = arr[0] + arr[arr.length - 1];
+		int j = arr.length - 1;
+		for (int i = 0; i < arr.length / 2; i++) {
+			if (arr[i] + arr[j] > max) {
+				max = arr[i] + arr[j];
+			}
+			j--;
+		}
+
+		System.out.println(max);
+	}
+}
+
+// 17. Дана последовательность целых чисел n a ,a , ,a 1 2  . Образовать новую
+// последовательность, выбросив из исходной
+// те члены, которые равны min( , , , ) 1 2 n a a  a .
+class Task17 {
+	public static void main(String[] args) {
+
+		int min;
+		int minCounter = 0;
+		int n = 0;
+
+		int arr[] = { 1, 2, 3, 4, 1, 5, 6, 1, 7, 8 };
+		min = arr[0];
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] < min) {
+				min = arr[i];
+			}
+		}
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] == min)
+				minCounter++;
+		}
+		int newArr[] = new int[arr.length - minCounter];
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] > min) {
+				newArr[n] = arr[i];
+				n++;
+			}
+		}
+
+		for (int p : newArr) {
+			System.out.print(p + " ");
+		}
+
+	}
+}
+
+/*
+ * 19. В массиве целых чисел с количеством элементов n найти наиболее часто
+ * встречающееся число. Если таких чисел несколько, то определить наименьшее из
+ * них.
+ */
+class Task19 {
+	public static void main(String[] args) {
+
+	}
+}
