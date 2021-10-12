@@ -145,16 +145,21 @@ class Task09 {
 
 // 10. Составить программу нахождения произведения квадратов первых двухсот
 // чисел.
-// тут переполнение вроде
+
+import java.math.BigInteger;
+
 class Task10 {
 	public static void main(String[] args) {
-		double a = 1;
-		double x = 1;
+		int a =1;
+		
+		BigInteger x =BigInteger.valueOf(1);
 		while (a <= 200) {
-			x *= a * a;
+		x=x.multiply(x.valueOf(a*a));
+		
+		System.out.println(x);
 			a++;
 		}
-		System.out.println(x);
+		System.out.println("result : "+x);
 	}
 }
 
